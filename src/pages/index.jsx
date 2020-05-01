@@ -107,7 +107,7 @@ class Index extends Component {
           id={website.skipNavId}
           style={{ paddingTop: "2rem", paddingBottom: "2rem" }}
         >
-          <Title style={{ marginTop: "4rem" }}>Recent projects</Title>
+          <Title style={{ marginTop: "4rem" }}>Projects</Title>
           <Listing posts={posts.nodes} />
         </IndexWrapper>
       </Layout>
@@ -165,22 +165,12 @@ export const pageQuery = graphql`
         }
       }
     }
-    posts: allPrismicPost(sort: { fields: [data___date], order: DESC }) {
+    posts: allPrismicPost {
       nodes {
         uid
         data {
           title {
             text
-          }
-
-          categories {
-            category {
-              document {
-                data {
-                  name
-                }
-              }
-            }
           }
         }
       }

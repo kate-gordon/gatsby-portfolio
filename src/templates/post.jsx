@@ -36,10 +36,7 @@ const PostWrapper = Wrapper.withComponent("main");
 
 const Post = ({ data: { prismicPost, posts }, location }) => {
   const { data } = prismicPost;
-  let categories = false;
-  if (data.categories[0].category) {
-    categories = data.categories.map((c) => c.category.document[0].data.name);
-  }
+
   return (
     <Layout customSEO>
       <SEO
@@ -52,15 +49,13 @@ const Post = ({ data: { prismicPost, posts }, location }) => {
       <Hero>
         <Wrapper>
           <Header />
-          <Headline>
-            {data.date} — {categories && <Categories categories={categories} />}
-          </Headline>
+          <Headline>{data.date}</Headline>
           <h1>{data.title.text}</h1>
         </Wrapper>
       </Hero>
       <PostWrapper id={website.skipNavId}>
         <SliceZone allSlices={data.body} />
-        <Title style={{ marginTop: "4rem" }}>Recent posts</Title>
+        <Title style={{ marginTop: "4rem" }}>Other projects</Title>
         <Listing posts={posts.nodes} />
       </PostWrapper>
     </Layout>
@@ -94,15 +89,6 @@ export const pageQuery = graphql`
         }
         description
 
-        categories {
-          category {
-            document {
-              data {
-                name
-              }
-            }
-          }
-        }
         body {
           ... on PrismicPostBodyText {
             slice_type
@@ -152,7 +138,7 @@ export const pageQuery = graphql`
     }
     posts: allPrismicPost(
       limit: 2
-      sort: { fields: [data___date], order: DESC }
+
       filter: { uid: { ne: $uid } }
     ) {
       nodes {
@@ -160,16 +146,6 @@ export const pageQuery = graphql`
         data {
           title {
             text
-          }
-
-          categories {
-            category {
-              document {
-                data {
-                  name
-                }
-              }
-            }
           }
         }
       }
