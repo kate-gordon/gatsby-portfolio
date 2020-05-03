@@ -11,7 +11,7 @@ import {
   SEO,
   Header,
 } from "../components";
-import Categories from "../components/Listing/Categories";
+
 import website from "../../config/website";
 
 const Hero = styled.header`
@@ -22,8 +22,8 @@ const Hero = styled.header`
 
 const Headline = styled.p`
   font-family: "Source Sans Pro", -apple-system, "BlinkMacSystemFont",
-    "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol";
+    "Segoe UI", "Helvetica", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
   color: ${(props) => props.theme.colors.grey};
   font-size: 1.25rem;
   a {
@@ -96,25 +96,6 @@ export const pageQuery = graphql`
             primary {
               text {
                 html
-              }
-            }
-          }
-          ... on PrismicPostBodyCodeBlock {
-            slice_type
-            id
-            primary {
-              code_block {
-                html
-              }
-            }
-          }
-          ... on PrismicPostBodyQuote {
-            slice_type
-            id
-            primary {
-              quote {
-                html
-                text
               }
             }
           }

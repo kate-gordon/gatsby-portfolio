@@ -135,9 +135,6 @@ Index.propTypes = {
     posts: PropTypes.shape({
       nodes: PropTypes.array.isRequired,
     }),
-    projects: PropTypes.shape({
-      nodes: PropTypes.array.isRequired,
-    }),
   }).isRequired,
 };
 
