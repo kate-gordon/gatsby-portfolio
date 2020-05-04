@@ -8,6 +8,7 @@ const typography = new Typography({
   baseFontSize: "18px",
   baseLineHeight: 1.45,
   headerFontFamily: [
+    "Muli",
     "Roboto",
     "sans-serif",
     "Apple Color Emoji",
@@ -15,7 +16,7 @@ const typography = new Typography({
     "Segoe UI Symbol",
   ],
   bodyFontFamily: [
-    "Lora",
+    "Muli",
     "-apple-system",
     "BlinkMacSystemFont",
     "Segoe UI",

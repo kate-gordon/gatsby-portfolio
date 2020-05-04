@@ -2,10 +2,9 @@ module.exports = {
   pathPrefix: "/", // Prefix for all links. If you deploy your site to example.com/portfolio your pathPrefix should be "portfolio"
   title: "Kate Gordon", // Navigation and Site Title
   titleAlt: "Kate's Projects", // Title for JSONLD
-  description:
-    "A typography-heavy & light-themed Gatsby Starter which uses the Headless CMS Prismic.",
-  headline: "Writing and publishing content for LekoArts", // Headline for schema.org JSONLD
-  url: "https://prismic.lekoarts.de", // Domain of your site. No trailing slash!
+  description: "A portfolio site for a Brooklyn based developer.",
+  headline: "Front End Dev in Brooklyn", // Headline for schema.org JSONLD
+  url: "https://www.k8gordon.com", // Domain of your site. No trailing slash!
   siteLanguage: "en", // Language Tag on <html> element
   logo: "/logos/katelogo.png", // Used for SEO
   ogLanguage: "en_US", // Facebook Language
@@ -13,7 +12,7 @@ module.exports = {
   // JSONLD / Manifest
   favicon: "src/katelogo.png", // Used for manifest favicon generation
   shortName: "Prismic", // shortname for manifest. MUST be shorter than 12 characters
-  author: "LekoArts", // Author for schemaORGJSONLD
+  author: "Kate Gordon", // Author for schemaORGJSONLD
   themeColor: "#3D63AE",
   backgroundColor: "#EBEDF2",
 
