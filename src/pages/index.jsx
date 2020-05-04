@@ -12,8 +12,8 @@ const Hero = styled.header`
 `;
 
 const HeroInner = styled(Wrapper)`
-  padding-top: 13rem;
-  padding-bottom: 13rem;
+  padding-top: 12rem;
+  padding-bottom: 12rem;
   h1 {
     margin-bottom: 2rem;
   }
@@ -35,6 +35,7 @@ const HeroText = styled.div`
   font-size: 1.7rem;
   line-height: 1.4;
   margin-bottom: 2rem;
+
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     font-size: 1.4rem;
   }

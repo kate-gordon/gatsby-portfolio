@@ -4,7 +4,7 @@ const theme = {
     bg: "#F0F0F2",
     black: "#000",
     greyLight: "#eddfde",
-    greyBlue: "#F205B3",
+    greyBlue: "#BF344D",
     grey: "#595C62",
     greyDark: "#303643",
     greyDarker: "#1c252b",
