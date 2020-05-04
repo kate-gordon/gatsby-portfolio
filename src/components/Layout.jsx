@@ -34,7 +34,7 @@ const globalStyle = css`
     background-color: ${theme.colors.primary};
   }
   a {
-    color: ${theme.colors.primary};
+    color: ${theme.colors.greyBlue};
     transition: all 0.4s ease-in-out;
     text-decoration: none;
     font-weight: 700;
